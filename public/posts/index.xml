@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on وب سایت اختصاصی دکتر محمدرضا نصیری</title>
+    <link>//localhost:1313/posts/</link>
+    <description>Recent content in Posts on وب سایت اختصاصی دکتر محمدرضا نصیری</description>
+    <generator>Hugo</generator>
+    <language>fa-ir</language>
+    <lastBuildDate>Sun, 02 Nov 2025 20:00:00 +0330</lastBuildDate>
+    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>اولین پست من</title>
+      <link>//localhost:1313/posts/my-first-post/</link>
+      <pubDate>Sun, 02 Nov 2025 20:00:00 +0330</pubDate>
+      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;p&gt;این سایت در دست طراحی است.&#xA;لطفا صبور باشید!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
