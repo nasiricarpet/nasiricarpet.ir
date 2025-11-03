@@ -1,0 +1,50 @@
+/* ۱. وارد کردن فونت وزیرمتن */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+/* ۲. اعمال فونت به بخش‌های اصلی پوسته PaperMod */
+body, .entry-content, .post-content, .main {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+/* ------------------------------------ */
+/* ---        بخش ۳: تم رنگی         --- */
+/* ------------------------------------ */
+
+/* در اینجا، ما رنگ آبی پیش‌فرض پوسته PaperMod را 
+  به یک رنگ قرمز لاکی شبیه به فرش تغییر می‌دهیم.
+*/
+
+:root {
+  /* رنگ اصلی برند خود را اینجا تعریف کنید */
+  /* من یک رنگ قرمز آجری (Firebrick) را به عنوان مثال انتخاب کردم */
+  --brand-color: #B22222; 
+  
+  /* یک نسخه کمی تیره‌تر برای زمانی که موس روی دکمه‌ها می‌رود */
+  --brand-color-darker: #8B0000;
+}
+
+
+/* اعمال رنگ جدید به حالت روشن (Light Mode) */
+[data-theme="light"] {
+  --primary-color: var(--brand-color);
+  --primary-color-darker: var(--brand-color-darker);
+  
+  /* رنگ متن دکمه‌ها */
+  --button-text-color: #ffffff; 
+  
+  /* رنگ دکمه‌ها در حالت عادی */
+  --button-background: var(--brand-color);
+  
+  /* رنگ دکمه‌ها وقتی موس روی آن‌هاست */
+  --button-hover-background: var(--brand-color-darker);
+}
+
+
+/* اعمال رنگ جدید به حالت تاریک (Dark Mode) */
+[data-theme="dark"] {
+  --primary-color: var(--brand-color);
+  --primary-color-darker: var(--brand-color-darker);
+  
+  --button-text-color: #ffffff;
+  --button-background: var(--brand-color);
+  --button-hover-background: var(--brand-color-darker);
+}
