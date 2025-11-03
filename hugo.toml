@@ -10,8 +10,9 @@ languageDir = "rtl"  # این دستور، پوسته PaperMod را کاملاً
 [params]
   # این فایل CSS، فونت ما را اضافه خواهد کرد
   custom_css = ["css/custom.css"]
-
+  custom_js = ["https://cdn.jsdelivr.net/npm/dayjs@1/plugin/jalali.js", "https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js", "/js/shamsi.js"]
 # این همان منویی است که شما درخواست کردید
+
 [menu]
   [[menu.main]]
     identifier = "profile"
