@@ -16,23 +16,23 @@ languageDir = "rtl"  # این دستور، پوسته PaperMod را کاملاً
   [[menu.main]]
     identifier = "profile"
     name = "پروفایل من"
-    url = "/profile/"
+    url = "/profile/"   # <-- باید با / شروع شود
     weight = 10
   [[menu.main]]
     identifier = "articles"
     name = "مقالات"
-    url = "/articles/"
+    url = "/articles/"  # <-- باید با / شروع شود
     weight = 20
   [[menu.main]]
     identifier = "services"
     name = "خدمات"
-    url = "/services/"
+    url = "/services/"  # <-- باید با / شروع شود
     weight = 30
   [[menu.main]]
     identifier = "contact"
     name = "ارتباط با من"
-    url = "/contact/"
-    weight = 40	
+    url = "/contact/"   # <-- باید با / شروع شود
+    weight = 40
 	[params.profileMode]
   enabled = true
   title = "دکتر محمدرضا نصیری"
