@@ -1,44 +1,51 @@
 baseURL = "https://nasiricarpet.ir/"
 languageCode = "fa-ir"
 title = "وب سایت اختصاصی دکتر محمدرضا نصیری"
-languageDir = "rtl"  # این دستور، پوسته PaperMod را کاملاً راست‌چین می‌کند
+languageDir = "rtl"
 
 [module]
   [[module.imports]]
     path = "github.com/adityatelange/hugo-PaperMod"
 
+# --- بخش Params (تنظیمات پوسته) ---
 [params]
-  # این فایل CSS، فونت ما را اضافه خواهد کرد
-  custom_css = ["css/custom.css"]
+  # --- راه‌حل فونت (با /) ---
+  # حالا این فایل در همه‌ی صفحات به درستی پیدا می‌شود
+  custom_css = ["/css/custom.css"]
+  
+  # (جاوا اسکریپت تاریخ شمسی)
   custom_js = ["https://cdn.jsdelivr.net/npm/dayjs@1/plugin/jalali.js", "https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js", "/js/shamsi.js"]
-# این همان منویی است که شما درخواست کردید
 
+  # --- راه‌حل پروفایل (منتقل شده به داخل params) ---
+  [params.profileMode]
+    enabled = true
+    title = "دکتر محمدرضا نصیری"
+    subtitle = "کارشناس رسمی دادگستری در رشته فرش | مشاوره در خرید و فروش فرش دستباف"
+    imageUrl = "/images/profile.jpg"
+    imageWidth = 200
+    imageHeight = 200
+    imageTitle = "عکس پروفایل دکتر نصیری"
+
+# --- بخش Menu (کاملاً جدا از Params) ---
+# لینک‌های شما در اینجا از قبل درست بودند (چون / داشتند)
 [menu]
   [[menu.main]]
     identifier = "profile"
     name = "پروفایل من"
-    url = "/profile/"   # <-- باید با / شروع شود
+    url = "/profile/"
     weight = 10
   [[menu.main]]
     identifier = "articles"
     name = "مقالات"
-    url = "/articles/"  # <-- باید با / شروع شود
+    url = "/articles/"
     weight = 20
   [[menu.main]]
     identifier = "services"
     name = "خدمات"
-    url = "/services/"  # <-- باید با / شروع شود
+    url = "/services/"
     weight = 30
   [[menu.main]]
     identifier = "contact"
     name = "ارتباط با من"
-    url = "/contact/"   # <-- باید با / شروع شود
+    url = "/contact/"
     weight = 40
-	[params.profileMode]
-  enabled = true
-  title = "دکتر محمدرضا نصیری"
-  subtitle = "کارشناس رسمی دادگستری در رشته فرش | مشاوره در خرید و فروش فرش دستباف"
-  imageUrl = "/images/profile.jpg" # آدرس عکس پروفایل شما
-  imageWidth = 200 # عرض عکس
-  imageHeight = 200 # ارتفاع عکس
-  imageTitle = "عکس پروفایل دکتر نصیری"
