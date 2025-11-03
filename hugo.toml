@@ -1,44 +1,43 @@
 baseURL = "https://nasiricarpet.ir/"
 languageCode = "fa-ir"
 title = "وب سایت اختصاصی دکتر محمدرضا نصیری"
-
-# --- راه‌حل راست‌چینی ---
-# این دستور، پوسته PaperMod را کاملاً راست‌چین می‌کند
-languageDir = "rtl"
+languageDir = "rtl"  # این دستور، پوسته PaperMod را کاملاً راست‌چین می‌کند
 
 [module]
   [[module.imports]]
     path = "github.com/adityatelange/hugo-PaperMod"
 
 [params]
-  # --- راه‌حل فونت ---
-  # ما از اسلش / در ابتدا استفاده می‌کنیم تا این فایل در همه‌ی صفحات پیدا شود
-  custom_css = ["/css/custom.css"]
+  # این فایل CSS، فونت ما را اضافه خواهد کرد
+  custom_css = ["css/custom.css"]
 
-  # (تنظیمات پروفایل که قبلاً اضافه کردیم)
-  [params.profileMode]
-    enabled = true
-    title = "دکتر محمدرضا نصیری"
-    subtitle = "متخصص فرش دستباف | پژوهشگر و نویسنده"
-    imageUrl = "/images/profile.jpg"
-    imageWidth = 200
-    imageHeight = 200
-
-# --- راه‌حل لینک‌های منو ---
-# ما از اسلش / در ابتدای همه‌ی URL ها استفاده می‌کنیم
+# این همان منویی است که شما درخواست کردید
 [menu]
+  [[menu.main]]
+    identifier = "profile"
+    name = "پروفایل من"
+    url = "/profile/"   # <-- باید با / شروع شود
+    weight = 10
   [[menu.main]]
     identifier = "articles"
     name = "مقالات"
-    url = "/articles/"
+    url = "/articles/"  # <-- باید با / شروع شود
     weight = 20
   [[menu.main]]
     identifier = "services"
     name = "خدمات"
-    url = "/services/"
+    url = "/services/"  # <-- باید با / شروع شود
     weight = 30
   [[menu.main]]
     identifier = "contact"
     name = "ارتباط با من"
-    url = "/contact/"
+    url = "/contact/"   # <-- باید با / شروع شود
     weight = 40
+	[params.profileMode]
+  enabled = true
+  title = "دکتر محمدرضا نصیری"
+  subtitle = "کارشناس رسمی دادگستری در رشته فرش | مشاوره در خرید و فروش فرش دستباف"
+  imageUrl = "/images/profile.jpg" # آدرس عکس پروفایل شما
+  imageWidth = 200 # عرض عکس
+  imageHeight = 200 # ارتفاع عکس
+  imageTitle = "عکس پروفایل دکتر نصیری"
