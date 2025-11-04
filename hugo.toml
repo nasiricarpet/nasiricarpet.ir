@@ -31,7 +31,7 @@ languageDir = "rtl"
   [params.profileMode]
     enabled = true
     title = "دکتر محمدرضا نصیری"
-    subtitle = "کارشناس رسمی دادگستری در رشته فرش | مشاوره در خرید و فروش فرش دستbاف"
+    subtitle = "کارشناس رسمی دادگستری در رشته فرش | مشاوره در خرید و فروش فرش دست باف"
     imageUrl = "/images/profile.jpg"
     imageWidth = 200
     imageHeight = 200
