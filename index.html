@@ -7,10 +7,10 @@
     <title>دکتر محمدرضا نصیری | کارشناس رسمی دادگستری در رشته فرش</title>
     <style>
         :root {
-            --primary-color: #1a252f; /* سرمه‌ای تیره */
-            --accent-color: #b38f4d;  /* طلایی خاکی/کرم معتبر */
-            --text-color: #333;
-            --bg-color: #f8f9fa;
+            --primary-color: #111a22; /* سرمه‌ای بسیار تیره ملوکانه */
+            --accent-color: #c5a059;  /* طلایی لوکس */
+            --text-color: #2c3e50;
+            --bg-color: #f4f6f8;
         }
 
         body {
@@ -22,38 +22,46 @@
             line-height: 1.8;
         }
 
-        /* هدر و ناوبری */
+        /* هدر سینمایی با پس‌زمینه تصویر فرش */
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(rgba(17, 26, 34, 0.85), rgba(17, 26, 34, 0.9)), url('images/hero-bg.jpeg') no-repeat center center/cover;
             color: white;
-            padding: 40px 20px;
+            padding: 100px 20px;
             text-align: center;
-            border-bottom: 4px solid var(--accent-color);
+            border-bottom: 5px solid var(--accent-color);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         header p {
-            margin: 10px 0 0 0;
-            font-size: 1.1rem;
+            margin: 15px 0 0 0;
+            font-size: 1.3rem;
             color: #bdc3c7;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         nav {
-            background-color: #2c3e50;
+            background-color: #1c2d3d;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav a {
-            color: white;
+            color: #edf2f7;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.95rem;
+            margin: 0 20px;
+            font-size: 1rem;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
@@ -61,106 +69,174 @@
             color: var(--accent-color);
         }
 
-        /* کانتینر اصلی */
         .container {
-            max-width: 1000px;
-            margin: 30px auto;
+            max-width: 1100px;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
-        /* کارت‌ها و بخش‌ها */
+        /* کارت‌ها */
         .card {
             background: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-right: 5px solid var(--accent-color);
+            padding: 35px;
+            margin-bottom: 35px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        /* ساختار درباره من ترکیبی با عکس */
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-img-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-img-container img {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         }
 
         h2 {
             color: var(--primary-color);
             margin-top: 0;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
         }
 
-        /* لیست خدمات */
-        .services-list {
+        /* لیست خدمات مدرن گرید */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .service-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.1);
+        }
+
+        /* بخش مقالات با تصویر پیش‌فرض */
+        .articles-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 25px;
+        }
+
+        .article-card {
+            display: flex;
             gap: 20px;
-            padding: 0;
-            list-style: none;
+            background: #fafbfc;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #edf2f7;
         }
 
-        .services-list li {
-            background: #fdfbf7;
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #eae0d5;
+        .article-img {
+            width: 150px;
+            object-fit: cover;
+            background-color: #e2e8f0;
         }
 
-        /* بخش مقالات اخیر */
-        .article-preview {
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
+        .article-content {
+            padding: 20px;
+            flex: 1;
         }
 
-        .article-preview:last-child {
-            border-bottom: none;
-        }
-
-        .article-preview h3 {
+        .article-content h3 {
             margin: 0 0 10px 0;
             font-size: 1.2rem;
         }
 
-        .article-preview h3 a {
+        .article-content h3 a {
             color: var(--primary-color);
             text-decoration: none;
         }
 
-        .article-preview h3 a:hover {
+        .article-content h3 a:hover {
             color: var(--accent-color);
         }
 
         .meta-date {
             font-size: 0.85rem;
-            color: #7f8c8d;
+            color: #a0aec0;
             display: block;
             margin-bottom: 5px;
         }
 
-        /* بخش کارشناسی آنلاین */
         .cta-box {
-            background-color: #f0f3f4;
-            border: 1px dashed var(--accent-color);
-            padding: 20px;
-            border-radius: 6px;
+            background: linear-gradient(135deg, #1a252f, #111a22);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
             text-align: center;
-            margin-top: 15px;
+            border: 1px solid var(--accent-color);
         }
 
-        /* دکمه‌ها و لینک‌ها */
         .btn-instagram {
             display: inline-block;
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
+            padding: 14px 30px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 10px;
-            font-size: 1rem;
+            margin-top: 15px;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .btn-instagram:hover {
+            transform: scale(1.03);
         }
 
         footer {
             text-align: center;
-            padding: 25px;
+            padding: 30px;
             background-color: var(--primary-color);
             color: white;
             font-size: 0.9rem;
-            border-top: 3px solid var(--accent-color);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        /* بهینه‌سازی برای موبایل */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .articles-card {
+                flex-direction: column;
+            }
+            .article-img {
+                width: 100%;
+                height: 180px;
+            }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -180,63 +256,79 @@
 
     <div class="container">
         
-        <!-- درباره من -->
+        <!-- درباره من همراه با عکس پرتره -->
         <div id="about" class="card">
-            <h2>درباره من</h2>
-            <p>من دکتر محمدرضا نصیری، کارشناس رسمی دادگستری در رشته فرش و پژوهشگر این حوزه هستم. هدف این پایگاه، ارائه مشاوره‌های علمی، ارزیابی‌های دقیق ساختاری و یاری رساندن به علاقه‌مندان و سرمایه‌گذاران برای اتخاذ تصمیمات هوشمندانه در بازار فرش دستباف ایران است.</p>
+            <div class="about-section">
+                <div class="about-text">
+                    <h2>درباره من</h2>
+                    <p>من دکتر محمدرضا نصیری، کارشناس رسمی دادگستری در رشته فرش و پژوهشگر این حوزه هستم. هدف این پایگاه علمی و تجاری، ارائه مشاوره‌های هوشمندانه، ارزیابی‌های دقیق ساختاری و یاری رساندن به مجموعه‌داران و سرمایه‌گذاران برای اتخاذ تصمیمات درست در بازار فرش دستباف ایران است.</p>
+                </div>
+                <div class="about-img-container">
+                    <!-- تصویر پرتره شما -->
+                    <img src="images/profile.jpeg" alt="دکتر محمدرضا نصیری">
+                </div>
+            </div>
         </div>
 
-        <!-- خدمات طبق بیو -->
+        <!-- خدمات تخصصی به صورت کارت‌های شیک -->
         <div id="services" class="card">
-            <h2>خدمات تخصصی</h2>
-            <ul class="services-list">
-                <li>
-                    <strong>⚖️ کارشناسی رسمی دادگستری:</strong> ارزیابی، قیمت‌گذاری و صدور گواهی‌های رسمی اصالت برای انواع فرش‌های دستباف و نفیس.
-                </li>
-                <li>
-                    <strong>💰 مشاوره خرید و سرمایه‌گذاری:</strong> ارائه راهبردهای تخصصی برای خرید هوشمندانه و سرمایه‌گذاری امن روی آثار ماندگار و فرش‌های آنتیک.
-                </li>
-                <li>
-                    <strong>📜 تحلیل ساختاری و تاریخی:</strong> بررسی متریال، تکنیک‌های بافت و سبک‌شناسی تخصصی فرش‌های ایران از عهد صفویه تا به امروز.
-                </li>
-            </ul>
+            <h2>خدمات تخصصی کارشناسی</h2>
+            <div class="services-grid">
+                <div class="service-box">
+                    <h3>⚖️ کارشناسی رسمی دادگستری</h3>
+                    <p>ارزیابی، قیمت‌گذاری عادلانه و صدور گواهی‌های رسمی و قانونی اصالت برای انواع فرش‌های دستباف، نفیس و صادراتی.</p>
+                </div>
+                <div class="service-box">
+                    <h3>💰 مشاوره خرید و سرمایه‌گذاری</h3>
+                    <p>ارائه راهبردهای خرید هوشمندانه آثار ماندگار، شناسایی فرصت‌های بازار و جلوگیری از ریسک خرید فرش‌های تقلبی.</p>
+                </div>
+                <div class="service-box">
+                    <h3>📜 تحلیل ساختاری و تاریخی</h3>
+                    <p>بررسی تخصصی متریال (تفکیک ابریشم طبیعی از مصنوعی)، آسیب‌شناسی الیاف و سبک‌شناسی فرش‌های ایران از عهد صفویه تا زندیه.</p>
+                </div>
+            </div>
         </div>
 
-        <!-- مقالات اخیر -->
+        <!-- مقالات اخیر همراه با تصویر کاور -->
         <div id="articles" class="card">
             <h2>آخرین مقالات تخصصی</h2>
-            
-            <div class="article-preview">
-                <span class="meta-date">۱۹ تیر ۱۴۰۵</span>
-                <h3><a href="/articles/silk-detection.html">تکنیک‌های عملی کارشناسی برای تشخیص ابریشم طبیعی در فرش</a></h3>
-                <p>در این مقاله به بررسی روش‌های آزمایشگاهی و تجربی می‌پردازیم که اصالت الیاف ابریشم را در فرش‌های آنتیک مشخص می‌کند...</p>
-            </div>
+            <div class="articles-list">
+                
+                <div class="article-card">
+                    <img src="images/silk-article.jpg" alt="تست ابریشم" class="article-img">
+                    <div class="article-content">
+                        <span class="meta-date">۱۹ تیر ۱۴۰۵</span>
+                        <h3><a href="/articles/silk-detection.html">تکنیک‌های عملی کارشناسی برای تشخیص ابریشم طبیعی</a></h3>
+                        <p>بررسی روش‌های کارشناسی و تجربی برای تفکیک ابریشم خالص از الیاف مصنوعی در فرش‌های آنتیک...</p>
+                    </div>
+                </div>
 
-            <div class="article-preview">
-                <span class="meta-date">تیر ۱۴۰۵</span>
-                <h3><a href="#">بررسی ساختار تولید فرش در اواخر دوره صفویه و انتقال به عهد زندیه</a></h3>
-                <p>تحلیلی بر چگونگی حفظ اصالت نقشه‌ها و تحولات کارگاه‌های بافت در دوران گذار تاریخی ایران...</p>
+                <div class="article-card">
+                    <img src="images/hero-bg.jpg" alt="فرش صفویه" class="article-img">
+                    <div class="article-content">
+                        <span class="meta-date">تیر ۱۴۰۵</span>
+                        <h3><a href="#">ساختار کارگاه‌های بافت در گذار از صفویه به عهد زندیه</a></h3>
+                        <p>تحلیلی بر چگونگی حفظ اصالت نقشه‌ها و تحولات تاریخی کارگاه‌های سلطنتی ایران...</p>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <!-- تماس و ارتباط -->
-        <div id="contact" class="card">
-            <h2>ارتباط و درخواست مشاوره</h2>
-            <p>جهت هماهنگی برای ارزیابی مجموعه‌ها، کارشناسی رسمی یا مشاوره‌های تخصصی، می‌توانید از طریق راه‌های زیر اقدام فرمایید:</p>
+        <!-- بخش ارتباط لوکس -->
+        <div id="contact" class="cta-box">
+            <h2 style="color: white; margin-bottom: 10px;">ارتباط تخصصی و درخواست مشاوره</h2>
+            <p style="color: #cbd5e0; max-width: 600px; margin: 0 auto 20px auto;">جهت هماهنگی برای ارزیابی مجموعه‌ها، کارشناسی رسمی یا مشاوره‌های تخصصی، می‌توانید از طریق ایمیل رسمی یا دایرکت اینستاگرام با من در ارتباط باشید.</p>
+            <p style="font-size: 1.1rem;">📬 <strong>ایمیل:</strong> nasiricarpet@gmail.com | 🌐 <strong>لینک‌ترک:</strong> <a href="https://linktr.ee/nasiricarpet" target="_blank" style="color: var(--accent-color); text-decoration: none;">nasiricarpet</a></p>
             
-            <p><strong>ایمیل رسمی:</strong> nasiricarpet@gmail.com</p>
-            <p><strong>لینک‌های ارتباطی:</strong> <a href="https://linktr.ee/nasiricarpet" target="_blank">linktr.ee/nasiricarpet</a></p>
-
-            <div class="cta-box">
-                <p style="margin-top: 0; font-weight: bold;">📥 جهت درخواست کارشناسی آنلاین، کلمه «مشاوره» را در اینستاگرام دایرکت کنید.</p>
-                <a href="https://instagram.com/nasiricarpet" target="_blank" class="btn-instagram">پیج اینستاگرام ما را دنبال کنید</a>
-            </div>
+            <p style="margin-top: 25px; font-weight: bold; color: var(--accent-color);">📥 جهت درخواست کارشناسی آنلاین، کلمه «مشاوره» را در اینستاگرام دایرکت کنید.</p>
+            <a href="https://instagram.com/nasiricarpet" target="_blank" class="btn-instagram">پیج ما را در اینستاگرام دنبال کنید</a>
         </div>
 
     </div>
 
     <footer>
-        <p>حقوق mادی و معنوی این وب‌سایت متعلق به دکتر محمدرضا نصیری است. &copy; ۲۰۲۶</p>
+        <p>حقوق مادی و معنوی این وب‌سایت متعلق به دکتر محمدرضا نصیری است. &copy; ۲۰۲۶</p>
     </footer>
 
 </body>
