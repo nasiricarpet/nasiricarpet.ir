@@ -3,67 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="محمد رضا نصیری، کارشناس رسمی فرش. تحلیل الیاف ابریشم و پشم، اصالت‌سنجی و تاریخ‌نگاری فرش ایران (صفویه تا زند).">
-    <title>محمد رضا نصیری | کارشناس رسمی فرش</title>
+    <meta name="description" content="محمد رضا نصیری، کارشناس رسمی فرش دستباف. تخصص در اصالت‌سنجی، تست الیاف ابریشم و پشم، و پژوهش در تاریخچه فرش ایران.">
+    <title>محمد رضا نصیری | کارشناس رسمی فرش دستباف</title>
     <style>
+        :root {
+            --primary-color: #1a252f; /* سرمه‌ای تیره */
+            --accent-color: #b38f4d;  /* طلایی خاکی/کرم معتبر */
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+        }
+
         body {
-            font-family: Tahoma, Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
         }
+
+        /* هدر و ناوبری */
         header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 2rem 0;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
             text-align: center;
+            border-bottom: 4px solid var(--accent-color);
         }
+
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
+            font-weight: bold;
         }
+
         header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            color: #ecf0f1;
+            margin: 10px 0 0 0;
+            font-size: 1.1rem;
+            color: #bdc3c7;
         }
+
+        nav {
+            background-color: #2c3e50;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* کانتینر اصلی */
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 2rem 0;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
-        .section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
+
+        /* کارت‌ها و بخش‌ها */
+        .card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-right: 5px solid var(--accent-color);
         }
+
         h2 {
-            color: #2980b9;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 10px;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5rem;
         }
-        .services ul {
-            list-style-type: square;
-            padding-right: 20px;
+
+        /* لیست خدمات */
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style: none;
         }
-        .services li {
-            margin-bottom: 10px;
+
+        .services-list li {
+            background: #fdfbf7;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #eae0d5;
         }
+
+        /* بخش مقالات اخیر */
+        .article-preview {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .article-preview:last-child {
+            border-bottom: none;
+        }
+
+        .article-preview h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .article-preview h3 a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .article-preview h3 a:hover {
+            color: var(--accent-color);
+        }
+
+        .meta-date {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* دکمه‌ها و لینک‌ها */
+        .btn-instagram {
+            display: inline-block;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: #fff;
-            margin-top: 20px;
-        }
-        a {
-            color: #2980b9;
-            text-decoration: none;
+            padding: 25px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--accent-color);
         }
     </style>
 </head>
@@ -71,37 +157,69 @@
 
     <header>
         <h1>محمد رضا نصیری</h1>
-        <p>کارشناس رسمی دادگستری در حوزه فرش دستباف</p>
+        <p>کارشناس رسمی حوزه فرش دستباف و ارزیابی اصالت الیاف</p>
     </header>
+
+    <nav>
+        <a href="#about">درباره من</a>
+        <a href="#services">خدمات تخصصی</a>
+        <a href="#articles">مقالات تخصصی</a>
+        <a href="#contact">ارتباط با من</a>
+    </nav>
 
     <div class="container">
         
-        <div class="section">
+        <!-- درباره من -->
+        <div id="about" class="card">
             <h2>درباره من</h2>
-            <p>من محمد رضا نصیری هستم. تمرکز اصلی من بر تحلیل و بررسی تخصصی فرش‌های دستباف، اصالت‌سنجی بافت و متریال (به‌ویژه تست الیاف ابریشم و پشم) و همچنین پژوهش در تاریخچه فرش‌های نفیس ایران از دوره صفویه تا زندیه است.</p>
+            <p>من محمد رضا نصیری هستم، پژوهشگر و کارشناس رسمی در حوزه فرش دستباف. تمرکز اصلی فعالیت‌های علمی و اجرایی من بر اصالت‌سنجی ساختاری فرش، تحلیل تخصصی متریال و الیاف (ابریشم و پشم) و کارشناسی تاریخی فرش‌های نفیس ایران از دوره صفویه تا زندیه معطوف است.</p>
         </div>
 
-        <div class="section services">
-            <h2>خدمات تخصصی</h2>
-            <ul>
-                <li>ارزیابی و کارشناسی رسمی ارزش فرش‌های دستباف</li>
-                <li>تست و تشخیص نوع الیاف (ابریشم طبیعی، مصنوعی، پشم و کرک)</li>
-                <li>آسیب‌شناسی و ارائه مشاوره برای مرمت فرش‌های تاریخی و آنتیک</li>
-                <li>مشاوره تخصصی پیش از خرید فرش‌های نفیس و سرمایه‌ای</li>
+        <!-- خدمات -->
+        <div id="services" class="card">
+            <h2>خدمات تخصصی کارشناسی</h2>
+            <ul class="services-list">
+                <li>
+                    <strong>🔍 تشخیص اصالت و بافت:</strong> ارزیابی دقیق تکنیک‌های بافت و شناسایی کپی‌ها یا تقلب‌های رایج در بازار فرش دستباف.
+                </li>
+                <li>
+                    <strong>🧶 تست تخصصی الیاف:</strong> تشخیص متریال به کار رفته در فرش و تفکیک ابریشم طبیعی از الیاف مصنوعی با متدهای کارشناسی.
+                </li>
+                <li>
+                    <strong>📜 ارزیابی تاریخی و قدمت:</strong> تحلیل و بررسی سبک‌شناسی نقشه‌ها و دوره‌های تاریخی فرش (به ویژه صفویه، افشاریه و زندیه).
+                </li>
             </ul>
         </div>
 
-        <div class="section">
-            <h2>تماس و ارتباط</h2>
-            <p>برای دریافت مشاوره و هماهنگی جهت کارشناسی حضوری (در منطقه بستان‌آباد و تبریز) و یا ارسال تصاویر برای بررسی اولیه، می‌توانید از طریق راه‌های زیر با من در ارتباط باشید:</p>
-            <p><strong>اینستاگرام:</strong> <a href="#" target="_blank">به زودی...</a></p>
-            <p><strong>ایمیل:</strong> info@nasiricarpet.ir</p>
+        <!-- مقالات اخیر -->
+        <div id="articles" class="card">
+            <h2>آخرین مقالات تخصصی</h2>
+            
+            <div class="article-preview">
+                <span class="meta-date">۱۹ تیر ۱۴۰۵</span>
+                <h3><a href="/articles/silk-detection.html">تکنیک‌های عملی کارشناسی برای تشخیص ابریشم طبیعی در فرش</a></h3>
+                <p>در این مقاله به بررسی روش‌های آزمایشگاهی و تجربی می‌پردازیم که اصالت الیاف ابریشم را در فرش‌های آنتیک مشخص می‌کند...</p>
+            </div>
+
+            <div class="article-preview">
+                <span class="meta-date">تیر ۱۴۰۵</span>
+                <h3><a href="#">بررسی ساختار تولید فرش در اواخر دوره صفویه و انتقال به عهد زندیه</a></h3>
+                <p>تحلیلی بر چگونگی حفظ اصالت نقشه‌ها و تحولات کارگاه‌های بافت در دوران گذار تاریخی ایران...</p>
+            </div>
+        </div>
+
+        <!-- تماس و اینستاگرام -->
+        <div id="contact" class="card">
+            <h2>ارتباط تخصصی و شبکه اجتماعی</h2>
+            <p>جهت هماهنگی برای کارشناسی رسمی، ارزیابی مجموعه‌ها یا مشاوره‌های سرمایه‌گذاری در حوزه فرش دستباف، می‌توانید از طریق ایمیل یا پیج رسمی اینستاگرام در ارتباط باشید.</p>
+            <p><strong>ایمیل رسمی:</strong> info@nasiricarpet.ir</p>
+            <a href="https://instagram.com/" target="_blank" class="btn-instagram">دنبال کردن پیج اینستاگرام</a>
         </div>
 
     </div>
 
     <footer>
-        <p>تمامی حقوق برای وب‌سایت محمد رضا نصیری محفوظ است. &copy; ۲۰۲۶</p>
+        <p>حقوق مادی و معنوی این وب‌سایت متعلق به محمد رضا نصیری است. &copy; ۲۰۲۶</p>
     </footer>
 
 </body>
